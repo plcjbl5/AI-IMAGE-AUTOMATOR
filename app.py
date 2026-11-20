@@ -23,7 +23,7 @@ def init_gsheets():
     creds = Credentials.from_service_account_info(creds_dict, scopes=scopes)
     gc = gspread.authorize(creds)
     # Open the Google Sheet by exact name
-    return gc.open("AI_Content_Logs").sheet1
+    return gc.open_by_key("1RECao8RjO3PmuVbMb-E8clgq9xqsQQiCK1GkigfOo_Y").sheet1
 
 sheet = init_gsheets()
 
